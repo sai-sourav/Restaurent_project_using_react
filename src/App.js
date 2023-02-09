@@ -1,11 +1,12 @@
 import Header from "./Components/Header";
 import React from 'react';
+import Summary from "./Components/Summary";
 
 function App() {
   return (
     <React.Fragment>
       <Header></Header>
-      <h2>Let's get started!</h2>
+      <Summary></Summary>
     </React.Fragment>
   );
 }
