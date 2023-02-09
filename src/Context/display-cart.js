@@ -1,28 +1,47 @@
 import React, { useState } from "react";
 
 const CartContext = React.createContext({
-    showcart: false,
-    updateshowcart: () => {}
-})
+  showcart: false,
+  cartitems: [],
+  updatecartitems: (newitem) => {},
+  updateshowcart: () => {},
+});
 
 export const CartContextProvider = (props) => {
-    const [showcart, updateshowcart] = useState(false);
-    console.log("triggered");
+  const [showcart, updateshowcart] = useState(false);
+  const [cartitems, updateitems] = useState([]);
 
-    const UpdateShowCart = () => {
-        updateshowcart(!showcart)
-    }
+  const UpdateShowCart = () => {
+    updateshowcart(!showcart);
+  };
 
-    const values = {
-        showcart: showcart,
-        updateshowcart: UpdateShowCart
-    }
+  const UpdateCartItems = (newitem) => {
+    updateitems((prevState) => {
+      const find = prevState.findIndex((item) => {
+        return item.id === newitem.id;
+      });
+      if (find >= 0) {
+        prevState[find].quantity += +newitem.quantity;
+        if (prevState[find].quantity < 1){
+          prevState.splice(find,1);
+        }
+        return [...prevState];
+      } else {
+        return [...prevState, newitem];
+      }
+    });
+  };
 
-    return (
-        <CartContext.Provider value={values}>{props.children}</CartContext.Provider>
-    )
+  const values = {
+    showcart: showcart,
+    cartitems: cartitems,
+    updatecartitems: UpdateCartItems,
+    updateshowcart: UpdateShowCart,
+  };
 
-}
+  return (
+    <CartContext.Provider value={values}>{props.children}</CartContext.Provider>
+  );
+};
 
-export default CartContext
-
+export default CartContext;

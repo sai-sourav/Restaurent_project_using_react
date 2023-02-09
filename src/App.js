@@ -10,7 +10,7 @@ function App() {
   const cart = useContext(CartContext);
   return (
     <React.Fragment>
-      {cart.showcart && <Popup />}
+      <React.Fragment>{cart.showcart && <Popup />}</React.Fragment>
       <React.Fragment>
         <Header></Header>
         <Summary></Summary>

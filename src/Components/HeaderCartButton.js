@@ -9,11 +9,18 @@ const HeaderCartButton = props => {
         e.preventDefault();
         cart.updateshowcart();
     }
+    let totalquantity = 0
+    if(cart.cartitems.length > 0){
+        totalquantity = cart.cartitems.map((item) => {return item.quantity}).reduce((acc,ele) => {return acc + ele})
+    }
+
+    // const classes = `header_Cart_button ${}`
+    
     return(
-        <button className="header_Cart_button" onClick={showCart}>
+        <button className="header_Cart_button bump" onClick={showCart}>
             <CartIcon />
             <h3>Your Cart</h3>
-            <h4 className="cart_item_count">0</h4>
+            <span className="cart_item_count">{totalquantity}</span>
         </button>
     )
 }

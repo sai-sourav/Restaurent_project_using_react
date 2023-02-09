@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import CartItemContext from "../Context/update-cart";
+import CartContext from "../Context/display-cart";
 import AddtoCart from "./AddtoCart";
 import "./MealsListItem.css";
 
 const MealsListItem = (props) => {
-  const Cartitem = useContext(CartItemContext);
+  const Cartitem = useContext(CartContext);
 
   function getitemquantity(quantity){
     const newitem = {
@@ -23,7 +23,7 @@ const MealsListItem = (props) => {
           <p className="Meal_desc">{props.description}</p>
           <p className="Meal_price">$ {props.price}</p>
         </div>
-        <AddtoCart onSubmit={getitemquantity}/>
+        <AddtoCart getquantity={getitemquantity}/>
       </li>
     </React.Fragment>
   );

@@ -1,47 +1,48 @@
 .add-to-cart-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .add-to-cart-form input {
-    width: 2rem;
-    height: 2rem;
-    text-align: center;
-    font-size: large;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: large;
 }
 
 .add_items {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 7rem;
-    margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 7rem;
+  margin-bottom: 0.5rem;
 }
 
 button {
-    color: white;
-    background-color: rgb(63, 55, 41);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    user-select: none;
+  color: white;
+  background-color: rgb(63, 55, 41);
+  border: none;
+  border-radius: 10px;
+  font-size: large;
+  cursor: pointer;
+  user-select: none;
 }
 
 button:hover,
 button:active {
-    color: black;
-    background-color: brown;
+  color: black;
+  background-color: brown;
 }
 
 .inc_or_dec {
-    width: 2rem;
-    height: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .add-to-cart-button {
-    width: 4rem;
-    height: 2rem;
+  width: 4rem;
+  height: 2rem;
 }
