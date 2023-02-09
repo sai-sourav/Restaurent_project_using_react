@@ -26,7 +26,7 @@ const AddtoCart = (props) => {
         <button className="inc_or_dec" onClick={increment}>
         +
         </button>
-        <input type="text" value={quantity} disabled="true"></input>
+        <input type="text" value={quantity} readOnly></input>
         <button className="inc_or_dec" onClick={decrement}>
           -
         </button>
