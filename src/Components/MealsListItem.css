@@ -1,7 +1,6 @@
 .meal_item {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content:space-between;
     margin-bottom: 15px;
     border-bottom: 1px solid #00000079;
     padding: 10px;
