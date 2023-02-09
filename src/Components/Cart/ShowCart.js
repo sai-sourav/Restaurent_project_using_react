@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./ShowCart.css";
 import CartContext from "../../Context/display-cart";
 import { useContext } from "react";
+import CartItemList from "./CartItemList";
 
 const Popup = (props) => {
   const CartPopup = (props) => {
@@ -21,13 +22,7 @@ const Popup = (props) => {
           <header className="popup-Header">
             <h2>Cart</h2>
           </header>
-          <div className="popup-content">
-            <h3>Sushi</h3>
-            <div className="popup-content_amount">
-              <h2>Total Amount</h2>
-              <h2>35.62</h2>
-            </div>
-          </div>
+          <CartItemList></CartItemList>
           <footer className="popup-action">
             <button
               onClick={(e) => {

@@ -31,26 +31,6 @@
     color: white;
   }
   
-  .popup-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .popup-content h3 {
-    margin: 0;
-  }
-
-  .popup-content_amount {
-    display: flex;
-    justify-content:space-between;
-  }
-
-  .popup-content_amount h2 {
-    margin: 0;
-  }
-  
   .popup-action {
     display: flex;
     justify-content: flex-end;

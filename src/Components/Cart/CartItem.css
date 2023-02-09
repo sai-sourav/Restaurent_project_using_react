@@ -1,0 +1,21 @@
+.popup-content {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: 1px solid #00000079;
+}
+
+.popup-content h3 {
+  margin: 0;
+  left: 0;
+}
+
+.popup-content_amount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-content_amount h2 {
+  margin: 0;
+}

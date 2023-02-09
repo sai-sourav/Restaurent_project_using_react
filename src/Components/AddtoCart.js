@@ -18,6 +18,7 @@ const AddtoCart = (props) => {
 
   const addtocart = (evt) => {
     evt.preventDefault();
+    props.onSubmit(quantity);
   }
 
   return (

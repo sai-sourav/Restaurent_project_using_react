@@ -3,10 +3,13 @@ import { CartContextProvider } from "./Context/display-cart";
 
 import "./index.css";
 import App from "./App";
+import { CartItemContextProvider } from "./Context/update-cart";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <CartContextProvider>
-    <App />
-  </CartContextProvider>
+  <CartItemContextProvider>
+    <CartContextProvider>
+      <App />
+    </CartContextProvider>
+  </CartItemContextProvider>
 );
