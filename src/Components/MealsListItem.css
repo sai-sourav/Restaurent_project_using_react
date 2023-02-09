@@ -1,0 +1,27 @@
+.meal_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #00000079;
+    padding: 10px;
+}
+
+.meal_item p {
+    margin: 0;
+    text-align: left;
+}
+
+.Meal_name {
+    font-weight: bold;
+}
+
+.Meal_desc {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.Meal_price {
+    color: red;
+    font-weight: bold;
+}
